@@ -2,7 +2,7 @@
 public class Solution {
     public int[] plusOne(int[] digits) {
         int carries = 1;
-        for(int i = digits.length-1; i>=0 && carries > 0; i--){  // fast break when carries equals zero
+        for(int i = digits.length-1; i>=0 && carries > 0; i--){  
             int sum = digits[i] + carries;
             digits[i] = sum % 10;
             carries = sum / 10;
