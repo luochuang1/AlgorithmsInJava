@@ -18,6 +18,7 @@ public class Solution {
         TreeNode root = new TreeNode(preorder[prestart]);
         int position = findPosition(inorder, instart, inend, preorder[prestart]);
 
+        //refer to http://blog.csdn.net/lsdtc1225/article/details/39247335 for detail
         root.left = myBuildTree(inorder, instart, position - 1,
                 preorder, prestart + 1, prestart + position - instart);
         root.right = myBuildTree(inorder, position + 1, inend,
